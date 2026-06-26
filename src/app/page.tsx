@@ -54,7 +54,7 @@ export default function Home() {
   <br />
   tecnologia para eventos, marcas
   <br />
-  e empresas>
+  e empresas
             </h1>
             <p className="mt-5 max-w-3xl text-xl font-semibold text-white md:text-3xl">
               A VRMKT desenvolve e opera soluções em realidade virtual, realidade aumentada, games interativos, conteúdos 360º e tecnologias para eventos corporativos, feiras, RH, agências e ativações de marca em todo o Brasil.
