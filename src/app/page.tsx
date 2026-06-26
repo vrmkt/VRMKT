@@ -50,7 +50,11 @@ export default function Home() {
         <div className="relative mx-auto flex h-[calc(100dvh-20px)] w-full max-w-7xl flex-col justify-center gap-5 overflow-hidden px-5 text-[#00BC00]">
           <div className="max-w-5xl pl-5">
            <h1 className="owners-xnarrow max-w-6xl text-5xl font-bold uppercase leading-[0.95] md:text-7xl lg:text-8xl">
-              Experiências imersivas, games e tecnologia para eventos, marcas e empresas
+  Experiências imersivas, games e
+  <br />
+  tecnologia para eventos, marcas
+  <br />
+  e empresas>
             </h1>
             <p className="mt-5 max-w-3xl text-xl font-semibold text-white md:text-3xl">
               A VRMKT desenvolve e opera soluções em realidade virtual, realidade aumentada, games interativos, conteúdos 360º e tecnologias para eventos corporativos, feiras, RH, agências e ativações de marca em todo o Brasil.
