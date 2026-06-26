@@ -22,46 +22,6 @@ import { LinkedInLogoIcon } from '@radix-ui/react-icons'
 
 export default function Home() {
   const [isDesktop, setIsDesktop] = useState(false)
-  const [index, setIndex] = useState(0) // índice do adjetivo atual
-  const [subIndex, setSubIndex] = useState(0) // quantos caracteres mostrar
-  const [apagando, setApagando] = useState(false) // se está apagando
-  const [blink, setBlink] = useState(true)
-
-  const adjetivos = ['estratégia','tecnologia','interação','planejamento','propósito']
-
-  // efeito de digitação e apagar
-  useEffect(() => {
-    if (index >= adjetivos.length) return
-
-    if (subIndex === adjetivos[index].length + 1 && !apagando) {
-      // tempo para começar a apagar
-      setTimeout(() => setApagando(true), 1000)
-      return
-    }
-
-    if (subIndex === 0 && apagando) {
-      setApagando(false)
-      setIndex((prev) => (prev + 1) % adjetivos.length)
-      return
-    }
-
-    const timeout = setTimeout(
-      () => {
-        setSubIndex((prev) => (apagando ? prev - 1 : prev + 1))
-      },
-      apagando ? 50 : 100,
-    )
-
-    return () => clearTimeout(timeout)
-  }, [subIndex, apagando, index])
-
-  // cursor piscando
-  useEffect(() => {
-    const blinkInterval = setInterval(() => {
-      setBlink((prev) => !prev)
-    }, 500)
-    return () => clearInterval(blinkInterval)
-  }, [])
 
   function scrollToSectionWithOffset() {
     const element = document.getElementById('about')
@@ -88,12 +48,28 @@ export default function Home() {
     <main className="relative flex flex-col">
       <section className="bg-[#004BA1]">
         <div className="relative mx-auto flex h-[calc(100dvh-20px)] w-full max-w-7xl flex-col justify-center gap-5 overflow-hidden px-5 text-[#00BC00]">
-          <h2 className="owners-xnarrow pl-5 text-7xl md:text-9xl">
-            Criatividade com <br/>
-          <span className="owners-xnarrow text-7xl font-bold md:text-9xl">
-            {adjetivos[index].substring(0, subIndex)}<span className={`inline-block w-2 ${blink ? 'opacity-100' : 'opacity-0'}`}>|</span>
-          </span>
-          </h2>
+          <div className="max-w-5xl pl-5">
+            <h1 className="owners-xnarrow text-5xl font-bold leading-none md:text-8xl">
+              Experiências imersivas, games e tecnologia para eventos, marcas e empresas
+            </h1>
+            <p className="mt-5 max-w-3xl text-xl font-semibold text-white md:text-3xl">
+              A VRMKT desenvolve e opera soluções em realidade virtual, realidade aumentada, games interativos, conteúdos 360º e tecnologias para eventos corporativos, feiras, RH, agências e ativações de marca em todo o Brasil.
+            </p>
+            <div className="mt-8 flex flex-col gap-3 text-lg font-bold text-white sm:flex-row">
+              <Link
+                href="/produtos-e-servicos"
+                className="rounded-full border border-white px-6 py-2 transition-colors hover:bg-white hover:text-[#004BA1]"
+              >
+                Conhecer produtos e serviços
+              </Link>
+              <Link
+                href="/contato"
+                className="rounded-full border border-white px-6 py-2 transition-colors hover:bg-white hover:text-[#004BA1]"
+              >
+                Solicitar uma proposta
+              </Link>
+            </div>
+          </div>
           
           <button
             onClick={() => scrollToSectionWithOffset()}
@@ -101,6 +77,46 @@ export default function Home() {
           >
             <Seta className="hover:drop-shadow-white/80 h-5 w-auto transition-all duration-500 hover:drop-shadow-[0_0px_3px_rgb(0_0_0_/_0.5)] md:h-10" />
           </button>
+        </div>
+      </section>
+      <section className="bg-[#004BA1] px-5 py-16 text-white">
+        <div className="mx-auto grid w-full max-w-7xl gap-5 md:grid-cols-3">
+          {[
+            {
+              title: 'Realidade virtual para eventos',
+              href: '/realidade-virtual-para-eventos',
+            },
+            {
+              title: 'Locação de games e VR',
+              href: '/locacao-de-games-para-eventos',
+            },
+            {
+              title: 'Games personalizados',
+              href: '/produtos-e-servicos',
+            },
+            {
+              title: 'Realidade aumentada',
+              href: '/produtos-e-servicos',
+            },
+            {
+              title: 'Experiências e conteúdos 360º',
+              href: '/produtos-e-servicos',
+            },
+            {
+              title: 'Totens, quizzes e rankings',
+              href: '/locacao-de-games-para-eventos',
+            },
+          ].map((service) => (
+            <Link
+              key={service.title}
+              href={service.href}
+              className="rounded-xl border border-[#00BC00] p-5 transition-colors hover:bg-[#00BC00] hover:text-[#004BA1]"
+            >
+              <h2 className="owners-xnarrow text-3xl font-bold">
+                {service.title}
+              </h2>
+            </Link>
+          ))}
         </div>
       </section>
       <section
@@ -169,7 +185,7 @@ export default function Home() {
       </section>
       <section className="z-20 -mt-4 h-auto w-full md:mt-0">
         <div className="mx-auto flex w-full max-w-7xl flex-col gap-3 rounded-xl bg-[#00bc00] p-3 md:gap-5 md:rounded-3xl md:p-5">
-          <Link href={'/produtos-e-servicos'} target='_blank' className="relative max-h-screen w-full overflow-hidden rounded-lg md:rounded-xl">
+          <Link href={'/produtos-e-servicos'} className="relative max-h-screen w-full overflow-hidden rounded-lg md:rounded-xl">
             <Image
               alt=""
               src={Sicredi}
@@ -189,7 +205,7 @@ export default function Home() {
               </h4>
             </div>
           </Link>
-          <Link href={'/produtos-e-servicos'} target='_blank' className="relative max-h-screen w-full overflow-hidden rounded-lg md:rounded-xl">
+          <Link href={'/produtos-e-servicos'} className="relative max-h-screen w-full overflow-hidden rounded-lg md:rounded-xl">
             <Image
               alt=""
               src={Corolla}
@@ -209,7 +225,7 @@ export default function Home() {
               </h4>
             </div>
           </Link>
-          <Link href={'/produtos-e-servicos'} target='_blank' className="relative max-h-screen w-full overflow-hidden rounded-lg md:rounded-xl">
+          <Link href={'/produtos-e-servicos'} className="relative max-h-screen w-full overflow-hidden rounded-lg md:rounded-xl">
             <Image
               alt=""
               src={Heineken}
@@ -229,7 +245,7 @@ export default function Home() {
               </h4>
             </div>
           </Link>
-          <Link href={'/produtos-e-servicos'} target='_blank' className="relative max-h-screen w-full overflow-hidden rounded-lg md:rounded-xl">
+          <Link href={'/produtos-e-servicos'} className="relative max-h-screen w-full overflow-hidden rounded-lg md:rounded-xl">
             <Image
               alt=""
               src={Magneti}
@@ -272,18 +288,18 @@ export default function Home() {
             NOSSOS CANAIS DE COMUNICAÇÃO
           </h3>
           <div className="flex w-full justify-between gap-10">
-            <Link href="https://www.linkedin.com/in/reginaldo-mulroth-barboza-2a71b816b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">
+            <Link href="https://www.linkedin.com/in/reginaldo-mulroth-barboza-2a71b816b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" rel="noopener noreferrer">
               <LinkedInLogoIcon className="h-8 w-auto md:h-10"/>
             </Link>
-            <Link href="https://www.instagram.com/vrmkt/" target="_blank">
+            <Link href="https://www.instagram.com/vrmkt/" target="_blank" rel="noopener noreferrer">
               <Image alt="" src={Instagram} className="h-8 w-auto md:h-10" />
             </Link>
-            <Link href="https://www.youtube.com/@vrmkt5658" target="_blank">
+            <Link href="https://www.youtube.com/@vrmkt5658" target="_blank" rel="noopener noreferrer">
               <Image alt="" src={Youtube} className="h-8 w-auto md:h-10" />
             </Link>
           </div>
         </div>
-        <Link href="https://api.whatsapp.com/send/?phone=5511972620886" target="_blank" className="flex h-auto items-center justify-center gap-5 rounded-2xl border p-5 md:h-[150px] md:px-10 md:py-0">
+        <Link href="https://api.whatsapp.com/send/?phone=5511972620886" target="_blank" rel="noopener noreferrer" className="flex h-auto items-center justify-center gap-5 rounded-2xl border p-5 md:h-[150px] md:px-10 md:py-0">
           <div>
             <Image alt="" src={Wpp} className="h-8 w-auto md:h-10" />
           </div>

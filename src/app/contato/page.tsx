@@ -60,6 +60,9 @@ export default function Contato() {
 
   return (
     <main className="mx-auto mt-14 flex min-h-screen w-full max-w-7xl flex-col px-5 md:mt-20 md:px-10">
+      <h1 className="owners-xnarrow mt-10 text-center text-5xl font-bold text-[#00BC00] md:mt-20 md:text-left md:text-6xl">
+        Contato
+      </h1>
       <span className="mt-10 max-w-[340px] text-center text-sm md:mt-20 md:max-w-[680px] md:text-left md:text-xl md:font-semibold">
         Temos algumas perguntas rápidas para ajudar nossa equipe especializada a
         entender seu problema e entrar em contato com você por WhatsApp.
@@ -191,13 +194,14 @@ export default function Contato() {
             <Link
               href="https://www.linkedin.com/in/reginaldo-mulroth-barboza-2a71b816b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
               target="_blank"
+              rel="noopener noreferrer"
             >
               <LinkedInLogoIcon className="h-8 w-auto md:h-10" />
             </Link>
-            <Link href="https://www.instagram.com/vrmkt/" target="_blank">
+            <Link href="https://www.instagram.com/vrmkt/" target="_blank" rel="noopener noreferrer">
               <Image alt="" src={Instagram} className="h-8 w-auto md:h-10" />
             </Link>
-            <Link href="https://www.youtube.com/@vrmkt5658" target="_blank">
+            <Link href="https://www.youtube.com/@vrmkt5658" target="_blank" rel="noopener noreferrer">
               <Image alt="" src={Youtube} className="h-8 w-auto md:h-10" />
             </Link>
           </div>
@@ -205,6 +209,7 @@ export default function Contato() {
         <Link
           href="https://api.whatsapp.com/send/?phone=5511972620886"
           target="_blank"
+          rel="noopener noreferrer"
           className="flex h-auto items-center justify-center gap-5 rounded-2xl border p-5 md:h-[150px] md:px-10 md:py-0"
         >
           <div>

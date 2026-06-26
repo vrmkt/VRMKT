@@ -22,9 +22,9 @@ export default function Cliente() {
         <DepoimentosComponent />
       </section>
       <section className="z-20 -mt-2 flex w-full flex-col gap-10 rounded-lg bg-[#009ade] pb-20 pt-10 md:gap-20 md:py-20">
-        <h2 className="owners-xnarrow mx-auto w-full max-w-7xl pl-10 text-4xl font-bold text-[#004ca1] md:px-5 md:text-5xl">
+        <h1 className="owners-xnarrow mx-auto w-full max-w-7xl pl-10 text-4xl font-bold text-[#004ca1] md:px-5 md:text-5xl">
           Nossos Clientes
-        </h2>
+        </h1>
         <NossosClientesComponent />
       </section>
       <section className="flex flex-col items-center justify-center gap-10 px-0 py-20 md:flex-row md:gap-20 md:px-0 md:py-40">
@@ -36,13 +36,14 @@ export default function Cliente() {
             <Link
               href="https://www.linkedin.com/in/reginaldo-mulroth-barboza-2a71b816b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
               target="_blank"
+              rel="noopener noreferrer"
             >
               <LinkedInLogoIcon className="h-8 w-auto md:h-10" />
             </Link>
-            <Link href="https://www.instagram.com/vrmkt/" target="_blank">
+            <Link href="https://www.instagram.com/vrmkt/" target="_blank" rel="noopener noreferrer">
               <Image alt="" src={Instagram} className="h-8 w-auto md:h-10" />
             </Link>
-            <Link href="https://www.youtube.com/@vrmkt5658" target="_blank">
+            <Link href="https://www.youtube.com/@vrmkt5658" target="_blank" rel="noopener noreferrer">
               <Image alt="" src={Youtube} className="h-8 w-auto md:h-10" />
             </Link>
           </div>
@@ -50,6 +51,7 @@ export default function Cliente() {
         <Link
           href="https://api.whatsapp.com/send/?phone=5511972620886"
           target="_blank"
+          rel="noopener noreferrer"
           className="flex h-auto items-center justify-center gap-5 rounded-2xl border p-5 md:h-[150px] md:px-10 md:py-0"
         >
           <div>

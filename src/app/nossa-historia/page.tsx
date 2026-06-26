@@ -32,7 +32,7 @@ export default function NossaHistoria() {
         <div className="absolute bottom-5 left-1/2 flex -translate-x-1/2 items-center gap-5 md:hidden">
           <Mouse className="h-8 w-auto -rotate-90" />
           <p className="w-[190px] text-sm text-[#0690CC] md:hidden">
-            Deslize para o lado e descruba
+            Deslize para o lado e descubra
           </p>
         </div>
         <div className="ml-10 flex w-[470px] shrink-0 flex-col items-start justify-center gap-2 md:ml-40">
@@ -312,7 +312,7 @@ export default function NossaHistoria() {
           <div className="absolute bottom-0 left-0 ml-36 hidden -translate-x-10 items-center gap-3 md:flex">
             <Mouse className="h-10 w-auto" />
             <span className="text-[#0690CC]">
-              Deslize para baixo e descruba
+              Deslize para baixo e descubra
             </span>
           </div>
         </div>

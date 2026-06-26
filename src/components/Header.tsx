@@ -9,8 +9,7 @@ import { usePathname } from 'next/navigation'
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
-
-    const pathname = usePathname()
+  const pathname = usePathname()
 
   function handleToggleMenu() {
     setIsMenuOpen(!isMenuOpen)
@@ -22,16 +21,31 @@ export function Header() {
       url: '/nossa-historia',
     },
     {
-      title: 'Nossos produtos e serviços',
-      url: '/produtos-e-servicos',
-    },
-    {
       title: 'Clientes',
       url: '/clientes',
     },
     {
       title: 'Contato',
       url: '/contato',
+    },
+  ]
+
+  const solutionMenus = [
+    {
+      title: 'Empresa de experiências imersivas',
+      url: '/empresa-de-experiencias-imersivas',
+    },
+    {
+      title: 'Realidade virtual para eventos',
+      url: '/realidade-virtual-para-eventos',
+    },
+    {
+      title: 'Locação de games para eventos',
+      url: '/locacao-de-games-para-eventos',
+    },
+    {
+      title: 'Produtos e serviços',
+      url: '/produtos-e-servicos',
     },
   ]
 
@@ -44,10 +58,7 @@ export function Header() {
       title: 'Nossa História',
       url: '/nossa-historia',
     },
-    {
-      title: 'Nossos produtos e serviços',
-      url: '/produtos-e-servicos',
-    },
+    ...solutionMenus,
     {
       title: 'Clientes',
       url: '/clientes',
@@ -58,20 +69,50 @@ export function Header() {
     },
   ]
 
+  const isSolutionRoute = solutionMenus.some((menu) => pathname === menu.url)
+
   return (
     <header className={`fixed top-0 z-50 w-full ${isMenuOpen ? 'bg-[#004BA1]' : 'bg-[#004BA1]/80'} transition-colors duration-100`}>
       <div className="mx-auto flex w-full max-w-7xl items-center justify-between px-5 py-3 md:h-20 md:px-10 md:py-6">
         <Link href={'/'}>
-            <Logo className="h-8 w-auto md:h-12"/>
+          <Logo className="h-8 w-auto md:h-12" />
         </Link>
         <nav className="hidden md:block">
-          <ul className="flex gap-10 text-lg font-bold">
-            {menus.map((menu) => (
+          <ul className="flex gap-6 text-lg font-bold">
+            {menus.slice(0, 1).map((menu) => (
               <li key={menu.title}>
-                <Link href={menu.url} >
-                    <h3 className={`py-0 px-5 rounded-full border hover:bg-white hover:border-[#004BA1] hover:text-[#004BA1] transition-colors duration-300 ${pathname === menu.url ? 'bg-white text-[#004BA1] border-[#004BA1]' : 'border-white'}`}>
+                <Link href={menu.url}>
+                  <h3 className={`rounded-full border px-5 py-0 transition-colors duration-300 hover:border-[#004BA1] hover:bg-white hover:text-[#004BA1] ${pathname === menu.url ? 'border-[#004BA1] bg-white text-[#004BA1]' : 'border-white'}`}>
+                    {menu.title}
+                  </h3>
+                </Link>
+              </li>
+            ))}
+            <li className="group relative">
+              <button className={`rounded-full border px-5 py-0 transition-colors duration-300 hover:border-[#004BA1] hover:bg-white hover:text-[#004BA1] ${isSolutionRoute ? 'border-[#004BA1] bg-white text-[#004BA1]' : 'border-white'}`}>
+                Soluções
+              </button>
+              <div className="invisible absolute left-0 top-full z-50 w-80 pt-3 opacity-0 transition-all duration-200 group-hover:visible group-hover:opacity-100">
+                <ul className="rounded-md bg-white p-3 text-base text-[#004BA1] shadow-xl">
+                  {solutionMenus.map((menu) => (
+                    <li key={menu.title}>
+                      <Link
+                        href={menu.url}
+                        className={`block rounded px-3 py-2 hover:bg-[#004BA1] hover:text-white ${pathname === menu.url ? 'bg-[#004BA1] text-white' : ''}`}
+                      >
                         {menu.title}
-                    </h3>
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </li>
+            {menus.slice(1).map((menu) => (
+              <li key={menu.title}>
+                <Link href={menu.url}>
+                  <h3 className={`rounded-full border px-5 py-0 transition-colors duration-300 hover:border-[#004BA1] hover:bg-white hover:text-[#004BA1] ${pathname === menu.url ? 'border-[#004BA1] bg-white text-[#004BA1]' : 'border-white'}`}>
+                    {menu.title}
+                  </h3>
                 </Link>
               </li>
             ))}
@@ -82,6 +123,7 @@ export function Header() {
             <button
               className="absolute right-5 md:hidden"
               onClick={handleToggleMenu}
+              aria-label={isMenuOpen ? 'Fechar menu' : 'Abrir menu'}
             >
               {isMenuOpen ? (
                 <svg
@@ -119,11 +161,11 @@ export function Header() {
           <Dialog.Portal>
             <Dialog.Overlay className="fixed bottom-0 left-0 z-30 h-[calc(100dvh-56px)] w-screen data-[state=open]:animate-overlayShow" />
             <Dialog.Content className="data-[state=open]:animate-contentShow fixed left-0 top-14 z-50 h-[calc(100dvh-48px)] w-screen bg-[#004ca1] p-[25px] shadow-[hsl(206_22%_7%_/_35%)_0px_10px_38px_-10px,_hsl(206_22%_7%_/_20%)_0px_10px_20px_-15px] focus:outline-none">
-              <Dialog.Title className='hidden'>Menu</Dialog.Title>
-              <ul className="flex h-full w-full flex-col justify-center gap-12 shrink-0">
+              <Dialog.Title className="hidden">Menu</Dialog.Title>
+              <ul className="flex h-full w-full shrink-0 flex-col justify-center gap-5 overflow-y-auto">
                 {mobileMenus.map((menu) => (
                   <li key={menu.title}>
-                    <Link href={menu.url} onClick={handleToggleMenu} className={`owners-xnarrow font-bold py-0 text-3xl flex px-5 w-full justify-center uppercase rounded-full border hover:bg-white hover:border-[#004BA1] hover:text-[#004BA1] transition-colors duration-300 ${pathname === menu.url ? 'bg-white text-[#004BA1] border-[#004BA1]' : 'border-white'}`}>
+                    <Link href={menu.url} onClick={handleToggleMenu} className={`owners-xnarrow flex w-full justify-center rounded-full border px-5 py-0 text-center text-2xl font-bold uppercase transition-colors duration-300 hover:border-[#004BA1] hover:bg-white hover:text-[#004BA1] ${pathname === menu.url ? 'border-[#004BA1] bg-white text-[#004BA1]' : 'border-white'}`}>
                       {menu.title}
                     </Link>
                   </li>

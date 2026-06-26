@@ -61,9 +61,9 @@ export default function ProdutosEServicos() {
     <main className="mt-14 flex min-h-[calc(100vh-200px)] flex-col md:mt-20">
       <section className="flex h-fit w-full flex-col gap-8 bg-[#00bc00] px-5 pb-10 pt-10 md:gap-10 md:pt-20">
         <div className="mx-auto flex w-full max-w-7xl flex-col gap-2 md:gap-5">
-          <h2 className="owners-xnarrow text-[1.7rem] font-bold leading-6 text-[#021847] md:text-5xl">
+          <h1 className="owners-xnarrow text-[1.7rem] font-bold leading-6 text-[#021847] md:text-5xl">
             CONHEÇA UM POUCO DOS NOSSOS PROJETOS
-          </h2>
+          </h1>
           <p className="max-w-[580px] text-sm md:text-base">
             Ao longo da nossa trajetória, já trabalhamos com grandes marcas e
             realizamos entregas desafiadoras. <br className="mb-2"></br>A
