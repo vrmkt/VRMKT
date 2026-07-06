@@ -47,7 +47,7 @@ export default function Home() {
   return (
     <main className="relative flex flex-col">
       <section className="bg-[#004BA1]">
-        <div className="relative mx-auto flex h-[calc(100dvh-20px)] w-full max-w-7xl flex-col justify-center gap-5 overflow-hidden px-5 text-[#00BC00]">
+        <div className="relative mx-auto flex min-h-[calc(100dvh-80px)] w-full max-w-7xl flex-col justify-start gap-5 overflow-hidden px-5 pb-12 pt-32 text-[#00BC00] md:pt-36 lg:pt-40">
           <div className="max-w-5xl pl-5">
            <h1 className="owners-xnarrow max-w-6xl text-5xl font-bold uppercase leading-[0.95] md:text-7xl lg:text-8xl">
   Experiências imersivas, games e
@@ -57,7 +57,7 @@ export default function Home() {
   e empresas
             </h1>
             <p className="mt-5 max-w-3xl text-xl font-semibold text-white md:text-3xl">
-              A VRMKT desenvolve e opera soluções em realidade virtual, realidade aumentada, games interativos, conteúdos 360º e tecnologias para eventos corporativos, feiras, RH, agências e ativações de marca em todo o Brasil.
+              A VRMKT desenvolve e opera soluções em realidade virtual, realidade aumentada, games corporativos interativos, conteúdos 360º e tecnologias para eventos corporativos, feiras, RH, agências e ativações de marca em todo o Brasil.
             </p>
             <div className="mt-8 flex flex-col gap-3 text-lg font-bold text-white sm:flex-row">
       <Link
