@@ -241,7 +241,7 @@ export default function NossaHistoria() {
               <p className="mt-2 max-w-72 text-sm font-medium text-neutral-600 md:max-w-[380px] md:text-base">
                 · Concepção da &quot;Estação das Experiências Sicredi&quot;
                 integrando Realidade Virtual, Realidade Aumentada, filmes e
-                games interativos.
+                games corporativos interativos.
               </p>
             </div>
             {/* Item 6 */}
@@ -294,7 +294,7 @@ export default function NossaHistoria() {
               </h4>
               <p className="mt-2 max-w-72 text-sm font-medium text-neutral-600 md:max-w-[380px] md:text-base">
                 · Treinamentos corporativos em Realidade Virtual para a Auren
-                Energia. <br className="mb-1" />· Ativação Caiaque VR para o
+                Energia. <br className="mb-1" />· Ativação Caiaque Realidade Virtual para o
                 Coob
               </p>
             </div>

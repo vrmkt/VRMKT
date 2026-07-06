@@ -194,7 +194,7 @@ export default function ProdutosEServicos() {
               </div>
               <div className="flex h-0 w-full flex-col justify-between overflow-hidden transition-all duration-500 group-hover:h-[210px] md:group-hover:h-[250px]">
                 <p className="pr-3 pt-5 text-xs">
-                  Games interativos são ferramentas poderosas no live marketing.
+                  Games corporativos interativos são ferramentas poderosas no live marketing.
                   <br />
                   Criamos jogos personalizados que aumentam o engajamento,
                   ampliam o tempo de interação com a marca e geram dados em

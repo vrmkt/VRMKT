@@ -15,7 +15,7 @@ const footerLinks = [
     url: '/realidade-virtual-para-eventos',
   },
   {
-    title: 'Locação de games para eventos',
+    title: 'Locação de games corporativos para eventos',
     url: '/locacao-de-games-para-eventos',
   },
   {

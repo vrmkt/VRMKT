@@ -164,7 +164,7 @@ export default function Home() {
               <p>Como fazemos isso?</p>
               <p>
                 Com criatividade e inovação: usamos realidade virtual, aumentada
-                e mista, games interativos e criamos design de experiências para
+                e mista, games corporativos interativos e criamos design de experiências para
                 aumentar o impacto na comunicação das marcas.
               </p>
               <p className="font-bold">A tecnologia está na nossa essência.</p>

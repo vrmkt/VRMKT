@@ -36,7 +36,7 @@ const serviceJsonLd = {
 
 const faq = [
   {
-    question: 'É possível usar VR em eventos com grande circulação?',
+    question: 'É possível usar Realidade Virtual em eventos com grande circulação?',
     answer:
       'Sim. O projeto precisa considerar fluxo, tempo médio de experiência, espaço disponível, equipe de apoio e operação técnica para manter a ação organizada.',
   },
@@ -66,7 +66,7 @@ export default function RealidadeVirtualParaEventos() {
             Realidade virtual para eventos
           </p>
           <h1 className="owners-xnarrow max-w-5xl text-5xl font-bold leading-none text-[#00BC00] md:text-7xl">
-            Criação, equipamentos e operação de VR para eventos
+            Criação, equipamentos e operação de Realidade Virtual para eventos
           </h1>
           <p className="max-w-3xl text-lg leading-8 md:text-xl">
             Experiências em realidade virtual para eventos corporativos,
@@ -84,7 +84,7 @@ export default function RealidadeVirtualParaEventos() {
 
       <section className="mx-auto grid w-full max-w-7xl gap-10 px-5 py-20 md:grid-cols-[0.9fr_1.1fr] md:px-10">
         <h2 className="owners-xnarrow text-4xl font-bold text-[#004BA1] md:text-6xl">
-          VR planejada para funcionar no ambiente do evento
+          Realidade Virtual planejada para funcionar no ambiente do evento
         </h2>
         <div className="grid gap-5 text-base leading-7 md:text-lg">
           <p>

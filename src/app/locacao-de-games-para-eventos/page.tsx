@@ -5,14 +5,14 @@ import Script from 'next/script'
 export const metadata: Metadata = {
   title: 'Locação de Games e Realidade Virtual para Eventos',
   description:
-    'Locação de games, realidade virtual, totens e experiências interativas para eventos corporativos, feiras, RH, agências e ações promocionais.',
+    'Locação de games corporativos, realidade virtual, totens e experiências interativas para eventos corporativos, feiras, RH, agências e ações promocionais.',
   alternates: {
     canonical: '/locacao-de-games-para-eventos',
   },
   openGraph: {
     title: 'Locação de Games e Realidade Virtual para Eventos',
     description:
-      'Locação de games, realidade virtual, totens e experiências interativas para eventos corporativos, feiras, RH, agências e ações promocionais.',
+      'Locação de games corporativos, realidade virtual, totens e experiências interativas para eventos corporativos, feiras, RH, agências e ações promocionais.',
     url: '/locacao-de-games-para-eventos',
   },
 }
@@ -22,7 +22,7 @@ const serviceJsonLd = {
   '@type': 'Service',
   name: 'Locação de Games e Realidade Virtual para Eventos',
   serviceType:
-    'Locação de games, realidade virtual, totens, quizzes e experiências interativas',
+    'Locação de games corporativos, realidade virtual, totens, quizzes e experiências interativas',
   provider: {
     '@type': 'Organization',
     name: 'VRMKT — Experiências Imersivas',
@@ -75,7 +75,7 @@ export default function LocacaoDeGamesParaEventos() {
             Games, VR, totens e experiências interativas para eventos
           </h1>
           <p className="max-w-3xl text-lg leading-8 md:text-xl">
-            Locação e operação de games, realidade virtual, quizzes, rankings e
+            Locação e operação de games corporativos, realidade virtual, quizzes, rankings e
             totens interativos para eventos corporativos, feiras, RH, agências e
             ações promocionais.
           </p>
@@ -99,7 +99,7 @@ export default function LocacaoDeGamesParaEventos() {
             tamanhos.
           </p>
           <p>
-            O escopo pode incluir games VR, quizzes com pontuação, rankings,
+            O escopo pode incluir games corporativos corporativos corporativos em realidade virtual, quizzes com pontuação, rankings,
             totens interativos, personalização opcional, equipamentos, montagem
             e operação.
           </p>
@@ -114,7 +114,7 @@ export default function LocacaoDeGamesParaEventos() {
       <section className="bg-[#00BC00] px-5 py-20 text-[#004BA1] md:px-10">
         <div className="mx-auto grid w-full max-w-7xl gap-5 md:grid-cols-3">
           {[
-            'Games VR e experiências interativas',
+            'Games corporativos em realidade virtual e experiências interativas',
             'Quizzes, rankings e totens',
             'Montagem, operação e personalização',
           ].map((item) => (

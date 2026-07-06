@@ -2,14 +2,14 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'Empresa de Experiências Imersivas, VR, AR e Games',
+  title: 'Empresa de Experiências Imersivas, Realidade Virtual, Realidade Aumentada e Games',
   description:
     'Conheça a VRMKT, empresa brasileira especializada em realidade virtual, realidade aumentada, games e experiências tecnológicas para eventos, empresas, marcas e agências.',
   alternates: {
     canonical: '/empresa-de-experiencias-imersivas',
   },
   openGraph: {
-    title: 'Empresa de Experiências Imersivas, VR, AR e Games',
+    title: 'Empresa de Experiências Imersivas, Realidade Virtual, Realidade Aumentada e Games',
     description:
       'Conheça a VRMKT, empresa brasileira especializada em realidade virtual, realidade aumentada, games e experiências tecnológicas para eventos, empresas, marcas e agências.',
     url: '/empresa-de-experiencias-imersivas',
@@ -43,7 +43,7 @@ export default function EmpresaDeExperienciasImersivas() {
             VRMKT
           </p>
           <h1 className="owners-xnarrow mt-3 text-5xl font-bold leading-none text-[#00BC00] md:text-7xl">
-            Empresa de experiências imersivas, VR, AR e games
+            Empresa de experiências imersivas, Realidade Virtual, Realidade Aumentada e games
           </h1>
           <p className="mt-6 max-w-3xl text-lg font-medium leading-8 md:text-xl">
             Fundada em 2016, a VRMKT cria e opera experiências em realidade
@@ -88,7 +88,7 @@ export default function EmpresaDeExperienciasImersivas() {
         <div className="mx-auto grid w-full max-w-7xl gap-5 md:grid-cols-3">
           {[
             'Realidade virtual, aumentada e mista',
-            'Games, quizzes, rankings e interações',
+            'Games corporativos, quizzes, rankings e interações',
             'Conteúdos 360º e experiências para eventos',
           ].map((item) => (
             <div key={item} className="rounded-lg border border-[#004BA1] p-6">
