@@ -14,10 +14,56 @@ const figtree = Figtree({
   subsets: ['latin'],
 })
 
+const defaultDescription =
+  'A VRMKT cria e opera experiências em realidade virtual, realidade aumentada, games, conteúdos 360º e tecnologia para eventos, marcas, empresas e agências em todo o Brasil.'
+
 export const metadata: Metadata = {
-  title: 'VRMKT',
-  description: 'Design de experiências',
+  metadataBase: new URL('https://www.vrmarkt.com.br'),
+  title: {
+    default: 'VRMKT | Realidade Virtual, Games e Experiências Imersivas',
+    template: '%s | VRMKT',
+  },
+  description: defaultDescription,
   icons: ['/favicon.svg'],
+  alternates: {
+    canonical: '/',
+  },
+  openGraph: {
+    title: 'VRMKT | Realidade Virtual, Games e Experiências Imersivas',
+    description: defaultDescription,
+    url: 'https://www.vrmarkt.com.br',
+    siteName: 'VRMKT',
+    locale: 'pt_BR',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'VRMKT | Realidade Virtual, Games e Experiências Imersivas',
+    description: defaultDescription,
+  },
+}
+
+const organizationJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: 'VRMKT — Experiências Imersivas',
+  url: 'https://www.vrmarkt.com.br',
+  foundingDate: '2016',
+  email: 'reginaldo@vrmkt.com.br',
+  telephone: '+55 11 97262-0886',
+  areaServed: {
+    '@type': 'Country',
+    name: 'Brasil',
+  },
+  serviceType: [
+    'Realidade virtual',
+    'Realidade aumentada',
+    'Realidade mista',
+    'Games',
+    'Conteúdos 360º',
+    'Experiências imersivas',
+    'Tecnologia para eventos',
+  ],
 }
 
 export default function RootLayout({
@@ -26,28 +72,14 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <>
-      <GoogleTagManager gtmId="GTM-TT4C7FLQQ" />
-      <html lang="pt">
-        <head>
-          {/* Google Tag Manager */}
-          <Script id="gtm-script" strategy="afterInteractive">
-            {`
-            (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-            })(window,document,'script','dataLayer','GTM-MGW2X2TS');
-          `}
-          </Script>
-        </head>
-        <body className={`${figtree.variable} relative antialiased`}>
-          <noscript
+    <html lang="pt-BR">
+      <body className={`${figtree.variable} relative antialiased`}>
+        <GoogleTagManager gtmId="GTM-T4C7FLQQ" />
+          <Script
+            id="organization-json-ld"
+            type="application/ld+json"
             dangerouslySetInnerHTML={{
-              __html: `
-        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MGW2X2TS"
-        height="0" width="0" style="display:none;visibility:hidden"></iframe>
-      `,
+              __html: JSON.stringify(organizationJsonLd),
             }}
           />
           <Header />
@@ -55,6 +87,7 @@ export default function RootLayout({
           <Link
             href="https://api.whatsapp.com/send/?phone=5511972620886"
             target="_blank"
+            rel="noopener noreferrer"
             className="fixed bottom-5 right-5 z-50 rounded-full shadow-2xl md:bottom-10 md:right-10"
           >
             <Image
@@ -64,8 +97,7 @@ export default function RootLayout({
             />
           </Link>
           <Footer />
-        </body>
-      </html>
-    </>
+      </body>
+    </html>
   )
 }
