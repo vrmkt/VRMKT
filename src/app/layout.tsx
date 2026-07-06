@@ -19,6 +19,9 @@ const defaultDescription =
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.vrmarkt.com.br'),
+  verification: {
+    google: "Ztg4GaqzYatg5sYicwZ-X4en6e_mT5PDjcciPemontg",
+  },
   title: {
     default: 'VRMKT | Realidade Virtual, Games e Experiências Imersivas',
     template: '%s | VRMKT',
