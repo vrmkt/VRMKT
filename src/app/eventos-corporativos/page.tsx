@@ -20,7 +20,7 @@ export const metadata: Metadata = {
 };
 
 const whatsappUrl =
-  "https://wa.me/5511999999999?text=Ol%C3%A1%2C%20gostaria%20de%20enviar%20um%20briefing%20corporativo%20para%20um%20evento.%0A%0AEmpresa%3A%0ACidade%3A%0AData%3A%0AP%C3%BAblico%20estimado%3A%0AObjetivo%20da%20a%C3%A7%C3%A3o%3A";
+  "https://wa.me/5511972620886?text=Ol%C3%A1%2C%20gostaria%20de%20enviar%20um%20briefing%20corporativo%20para%20um%20evento.%0A%0AEmpresa%3A%0ACidade%3A%0AData%3A%0AP%C3%BAblico%20estimado%3A%0AObjetivo%20da%20a%C3%A7%C3%A3o%3A";
 
 const eventTypes = [
   "Convenções corporativas",
