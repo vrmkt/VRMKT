@@ -20,7 +20,7 @@ export const metadata: Metadata = {
 };
 
 const whatsappUrl =
-  "https://wa.me/5511972620886?text=Ol%C3%A1%2C%20gostaria%20de%20enviar%20um%20briefing%20corporativo%20para%20um%20evento.%0A%0AEmpresa%3A%0ACidade%3A%0AData%3A%0AP%C3%BAblico%20estimado%3A%0AObjetivo%20da%20a%C3%A7%C3%A3o%3A";
+  "https://wa.me/5511972620886?text=Ol%C3%A1%2C%20vi%20as%20solu%C3%A7%C3%B5es%20da%20VRMKT%20para%20eventos%20corporativos%20e%20gostaria%20de%20entender%20op%C3%A7%C3%B5es%20para%20uma%20a%C3%A7%C3%A3o%20da%20minha%20empresa.";
 
 const eventTypes = [
   "Convenções corporativas",
@@ -73,14 +73,24 @@ export default function EventosCorporativosPage() {
           </p>
 
           <h1 className="owners-xnarrow max-w-6xl text-5xl font-bold uppercase leading-[1.02] text-[#00BC00] md:text-7xl lg:text-8xl">
-            Experiências imersivas, realidade virtual e games corporativos para eventos
+            Realidade Virtual, Games Corporativos e experiências interativas para eventos empresariais
           </h1>
 
           <p className="mt-8 max-w-3xl text-xl font-semibold leading-relaxed md:text-2xl">
-            A VRMKT cria, adapta e opera experiências interativas para eventos
-            corporativos, feiras, RH, ativações de marca e ações promocionais em
-            todo o Brasil.
+            A VRMKT cria e opera ativações tecnológicas para feiras, convenções, RH, SIPAT, lançamentos e eventos corporativos em todo o Brasil.
           </p>
+
+          <div className="mt-8 grid max-w-4xl gap-3 text-base font-semibold text-white/90 md:grid-cols-3">
+            <div className="rounded-2xl border border-white/20 p-4">
+              Projetos para marcas, agências e eventos corporativos.
+            </div>
+            <div className="rounded-2xl border border-white/20 p-4">
+              Realidade Virtual, Games Corporativos e experiências interativas.
+            </div>
+            <div className="rounded-2xl border border-white/20 p-4">
+              Operação técnica, equipamentos, conteúdo e suporte completo.
+            </div>
+          </div>
 
           <div className="mt-10 flex flex-col gap-4 text-lg font-bold sm:flex-row">
             <a
@@ -89,7 +99,7 @@ export default function EventosCorporativosPage() {
               rel="noopener noreferrer"
               className="rounded-full border border-[#00BC00] bg-[#00BC00] px-8 py-4 text-center text-[#004BA1] transition hover:bg-white hover:text-[#004BA1]"
             >
-              Enviar briefing corporativo
+              Falar com a VRMKT no WhatsApp
             </a>
 
             <Link
@@ -232,7 +242,7 @@ export default function EventosCorporativosPage() {
             rel="noopener noreferrer"
             className="rounded-full border border-[#004BA1] px-8 py-4 text-center text-lg font-bold transition hover:bg-[#004BA1] hover:text-white"
           >
-            Enviar briefing
+            Falar com a VRMKT
           </a>
         </div>
       </section>
