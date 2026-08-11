@@ -78,6 +78,10 @@ export default function EventosCorporativosPage() {
 
           <p className="mt-8 max-w-3xl text-xl font-semibold leading-relaxed md:text-2xl">
             A VRMKT cria e opera ativações tecnológicas para feiras, convenções, RH, SIPAT, lançamentos e eventos corporativos em todo o Brasil.
+
+              Projetos corporativos sob medida para empresas, agências e marcas que buscam engajamento, impacto e percepção de valor em eventos.
+
+              Soluções completas com operação técnica, equipamentos, conteúdo e personalização conforme objetivo, cidade, duração e formato da ação.
           </p>
 
           <div className="mt-8 grid max-w-4xl gap-3 text-base font-semibold text-white/90 md:grid-cols-3">
