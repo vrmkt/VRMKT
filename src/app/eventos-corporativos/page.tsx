@@ -78,21 +78,44 @@ export default function EventosCorporativosPage() {
 
           <p className="mt-8 max-w-3xl text-xl font-semibold leading-relaxed md:text-2xl">
             A VRMKT cria e opera ativações tecnológicas para feiras, convenções, RH, SIPAT, lançamentos e eventos corporativos em todo o Brasil.
-
-              Projetos corporativos sob medida para empresas, agências e marcas que buscam engajamento, impacto e percepção de valor em eventos.
-
-              Soluções completas com operação técnica, equipamentos, conteúdo e personalização conforme objetivo, cidade, duração e formato da ação.
           </p>
 
           <div className="mt-8 grid max-w-4xl gap-3 text-base font-semibold text-white/90 md:grid-cols-3">
-            <div className="rounded-2xl border border-white/20 p-4">
-              Projetos para marcas, agências e eventos corporativos.
+            <div className="rounded-3xl border border-white/15 bg-white/5 p-6">
+              <p className="text-sm font-semibold uppercase tracking-[0.25em] text-green-400">
+                Sob medida
+              </p>
+              <h3 className="mt-4 text-2xl font-bold text-white">
+                Projetos corporativos
+              </h3>
+              <p className="mt-3 text-base leading-7 text-white/75">
+                Experiências criadas para empresas, agências e marcas que buscam
+                engajamento, impacto e percepção de valor em eventos.
+              </p>
             </div>
-            <div className="rounded-2xl border border-white/20 p-4">
-              Realidade Virtual, Games Corporativos e experiências interativas.
+            <div className="rounded-3xl border border-white/15 bg-white/5 p-6">
+              <p className="text-sm font-semibold uppercase tracking-[0.25em] text-green-400">
+                Tecnologia
+              </p>
+              <h3 className="mt-4 text-2xl font-bold text-white">
+                Games e Realidade Virtual
+              </h3>
+              <p className="mt-3 text-base leading-7 text-white/75">
+                Realidade Virtual, Games Corporativos, totens e experiências
+                interativas aplicadas ao objetivo da ação.
+              </p>
             </div>
-            <div className="rounded-2xl border border-white/20 p-4">
-              Operação técnica, equipamentos, conteúdo e suporte completo.
+            <div className="rounded-3xl border border-white/15 bg-white/5 p-6">
+              <p className="text-sm font-semibold uppercase tracking-[0.25em] text-green-400">
+                Entrega completa
+              </p>
+              <h3 className="mt-4 text-2xl font-bold text-white">
+                Operação técnica
+              </h3>
+              <p className="mt-3 text-base leading-7 text-white/75">
+                Equipamentos, conteúdo, suporte, montagem e operação técnica
+                conforme cidade, duração e formato do evento.
+              </p>
             </div>
           </div>
 
