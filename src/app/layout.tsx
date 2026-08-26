@@ -77,7 +77,7 @@ export default function RootLayout({
   return (
     <html lang="pt-BR">
       <body className={`${figtree.variable} relative antialiased`}>
-        <GoogleTagManager gtmId="GTM-T4C7FLQQ" />
+        <GoogleTagManager gtmId="GTM-MGW2X2TS" />
           <Script
             id="organization-json-ld"
             type="application/ld+json"
