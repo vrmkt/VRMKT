@@ -13,11 +13,11 @@ export default function Contato() {
   const formSchema = z.object({
     name: z.string().min(3, { message: 'Mínimo de 3 caracteres' }),
     phone: z
-      .string()
-      .regex(
-        /^\((?:[14689][1-9]|2[12478]|3[1234578]|5[1345]|7[134579])\) (?:[2-8]|9[0-9])[0-9]{3}-[0-9]{4}$/,
-        'Número inválido. Ex: (99) 99999-9999',
-      ),
+  .string()
+  .transform((val) => val.replace(/\D/g, ''))
+  .refine((val) => /^\d{10,11}$/.test(val), {
+    message: 'Número inválido. Digite DDD + telefone (10 ou 11 dígitos)',
+  }),
     email: z.string().email({ message: 'Email inválido' }),
     empresa: z.string().optional(),
     mensagem: z.string().min(3, { message: 'Mínimo de 3 caracteres' }),
